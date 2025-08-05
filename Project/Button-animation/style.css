@@ -1,0 +1,44 @@
+body{
+    background-color:black;
+    height:100vh;
+}
+
+.card{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.btn{
+    padding:10px 30px;
+    font-size:20px;
+    border-radius:1000px;
+    border:none;
+    position:relative;
+    color:white;
+    background-color:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.btn::after{
+    content: '';
+    position:absolute;
+    height:110%;
+    width:105%;
+    color:blue;
+    z-index:-1;
+    background-image:linear-gradient(to bottom right, rgb(223, 53, 235),rgb(53, 244, 237));
+    border-radius:1000px;
+    top:50%;
+    left:50%;
+    transform:translate(-50% , -50%);
+}
+
+.btn:hover{
+    z-index: 0;
+    box-shadow:40px 0 100px rgb(223, 53, 235) , -40px 0 100px rgb(53, 244, 237);
+}
